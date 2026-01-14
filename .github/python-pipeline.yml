@@ -19,7 +19,7 @@ jobs:
         run: pip install flake8 pylint
 
       - name: Lint hello.py
-        run: |
+        run:
           flake8 hello.py
           pylint hello.py
 
@@ -55,7 +55,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/${{ github.repository }}
-          tags: |
+          tags:
             type=sha,format=short,prefix=,suffix=
             type=sha,format=long,prefix=,suffix=
             type=ref,event=branch,prefix=,suffix=
