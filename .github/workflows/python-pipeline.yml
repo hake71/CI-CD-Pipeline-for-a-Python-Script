@@ -16,7 +16,9 @@ jobs:
           python-version: "3.13"
 
       - name: Install requirements
-        run: pip install flake8 pylint
+        run: 
+          pip install flake8
+          pip3 install pylint
 
       - name: Lint hello.py
         run:
