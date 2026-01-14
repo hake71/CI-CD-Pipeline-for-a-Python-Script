@@ -19,9 +19,12 @@ jobs:
         run: 
           pip install flake8 pylint
 
-      - name: Check lint and flake8
+      - name: Check lint
         run: 
           pylint --version
+
+      - name: Check flake8
+        run: 
           flake8 --version
 
       - name: Lint hello.py
